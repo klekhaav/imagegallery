@@ -1,0 +1,25 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'image/style.css' %}"/>
+<div class="detail_header_img">
+
+</div>
+<div class="detail_block_img">
+    <div class="detail_img">
+        <a href="/media/{{ image.original_img }}">
+            <img src="/media/{{ image.original_img }}" width="500">
+        </a>
+    </div>
+    <div class="detail_img_descr">
+        <h1>{{ image.title }}</h1>
+        <br>
+        <h3>Author: {{ image.author }}</h3>
+        <h3>Creation date: {{ image.creation_date }}</h3>
+        <h3>Country of creation: {{ image.country }}</h3>
+        <br>
+        <h3>Main style: {{ image.style }}</h3>
+        <h3>Main color: {{ image.main_colour }}</h3>
+        <br>
+        <p>Publication date: {{ image.pub_date }}</p>
+    </div>
+</div>

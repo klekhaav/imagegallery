@@ -1,0 +1,19 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'image/style.css' %}"/>
+{% for image in object_list|slice:":9" %}
+    <div class="img">
+        <div class="header_img">
+            <h2>{{ image.title }}</h2>
+        </div>
+        <div class="body_img">
+            <a href="{% url 'image:detail' image.id %}">
+                <img src="/media/{{ image.original_img }}" width="300">
+            </a>
+        </div>
+        <div class="img_descr">
+            <p>Author: {{ image.author }}</p>
+            <p>Creation date: {{ image.creation_date|date:"d M Y" }}</p>
+        </div>
+    </div>
+{% endfor %}
