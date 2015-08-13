@@ -1,5 +1,5 @@
 =====
-Polls
+Image Gallery
 =====
 
 Simple image gallery app. Support Author and types of images.
