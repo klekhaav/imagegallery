@@ -9,11 +9,11 @@ class ImagesAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Image',           {'fields':  ['title', 'author', 'original_img']}),
         ('Description',     {'fields':  ['creation_date', 'country']}),
-        ('Specification',   {'fields':  ['style', 'main_colour']}),
+        ('Specification',   {'fields':  ['style', 'main_colour', 'pub_date']}),
     ]
     list_display = ('title', 'author', 'pub_date', 'creation_date', 'preview', 'was_published_recently')
     preview = AdminThumbnail(image_field='admin_block_img')
-    search_fields = ('author', 'title')
+    search_fields = ('title',)
     list_filter = ['pub_date']
 
 
